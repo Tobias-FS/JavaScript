@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        output,div {
+            display: block;
+            background-color: lightgray;
+        }
+    </style>
+
+    <label for="numero" >Número</label>
+    <input type="text" id="numero" >
+    <button id="adicionar" >Adicionar</button>
+    <output id="numeros"></output>
+
+    <label for="soma">Soma</label>
+    <div id="soma" ></div>
+
+    <label for="numeros">Média</label>
+    <div id="media" ></div>
+
+    <script>
+        document.getElementById( 'adicionar' ).onclick = adicionar;
+        var numeros = [];
+
+        function adicionar() {
+            var valor = document.getElementById( 'numero' ).value;
+            if ( isNaN( valor ) ) {
+                alert( 'Informe numero' );
+                return;
+            }
+
+            var numero = parseInt( valor );
+            // var numero = parseFloat( valor );
+            // var numero = Number( valor );
+
+            numeros.push( numero );
+
+            document.getElementById( 'numeros' ).innerText += numero + "\n"
+        
+            var soma = somar( numeros );
+            document.getElementById( 'soma' ).innerText = soma;
+
+            var media = calcMedia( soma );
+            document.getElementById( 'media' ).innerText = media;
+        }
+
+        function somar( numeros ) {
+            var tot = 0;
+
+            for( var valor of numeros ) {
+                tot += valor;
+            }
+
+            return tot;
+            
+        }
+
+        function calcMedia( n ) {
+            var medias = n / numeros.length;
+            console.log( medias );
+            return medias;
+                        
+        }
+
+    </script>
+</body>
+</html>

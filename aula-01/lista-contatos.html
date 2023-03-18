@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos</title>
+</head>
+<body>
+    <style>
+        tfoot { 
+            background-color: bisque;
+        }
+
+        .selecionado {
+            background-color: darksalmon;
+        }
+    </style>
+
+    <h1>Contatos</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Ana</td>
+                <td>(22) 2233-4455</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Zé1</td>
+                <td>(22) 2255-4455</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Joana</td>
+                <td>(32) 2233-4455</td>
+            </tr>
+            
+        </tbody>
+
+        <tfoot>
+            <tr> <td>3</td> <td></td> <td></td> </tr>
+        </tfoot>
+    </table>
+    <output>
+
+    </output>
+
+    <script>
+        var linhas = Array.from(document.querySelectorAll( 'tr' ));
+        for ( var lin of linhas ) {
+            lin.onclick = trocarCor;
+        }
+        function trocarCor( evento ) {
+            var celula = evento.target;
+            var linha = celula.parentElement;
+            linha.classList.toggle( 'selecionado' );
+            // Acrescenta o Id ao output
+            document.querySelector( 'output' ).innerText += linha.innerText;
+
+        }
+        
+    </script>
+
+</body>
+</html>

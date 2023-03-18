@@ -1,0 +1,16 @@
+3- Crie um campo de entrad em que o usuario possa entrar com um 
+numero qualuquer.Ao clicar em um votão "adicionar":
+
+a- O número deve ser acrescentado em um arrray e exibido na tela;
+b- A soma dos números existentes no array deve ser atualizada na tela;
+c- A média dos números do array deve ser atualizada na tela;
+Para realizar os cálculos, crie funções.( As funções não devem 
+fazer nada além do cálculo _ex: imprimir, exibir );
+
+Exercício 4:
+Crie um botão "Remover" ao lado do botão "Adicionar". Ele deve
+fazer com que o número informado pelo usuário seja removido do
+array de números, caso exista, e a soma e a média dos números
+sejam atualizadas na tela. Se o número não existe, o usuário deve
+ser informado. DICA: Use as funções de array indexOf() e splice().
+
