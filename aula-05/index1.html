@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JSON</h1>
+
+    <output></output>
+
+    <script>
+        const contato = {
+            nome: 'Ana',
+            telefone: '25290044',
+            casada: true,
+            idade: 21,
+            filhos: [ 'Maria', 'João' ],
+            conjuge: {
+                nome: 'josé',
+                telefone: '33885599'
+            }
+        };
+
+        // Convertendo objeto em JSON ( string )
+        const contatoStr = JSON.stringify( contato );
+        const output = document.querySelector( 'output' );
+        // Idem ( output === null )
+        if ( ! output ) {
+            alert( 'Elemento não econtrado' );
+        } else {
+            document.querySelector( 'output' ).innerText = contatoStr;
+        }
+
+
+        // Convertendo JSON ( string ) em objeto
+        const contato2 = JSON.parse( contatoStr );
+        console.log( contato2 );
+    </script>
+</body>
+</html>

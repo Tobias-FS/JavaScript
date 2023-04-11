@@ -1,0 +1,6 @@
+1- Crie um botão "remover primeiro" que, quando clicado, remova
+a 1º linha da tabela. 
+OBS: Para remover um elemento do DOM, basta que esse invoque
+o método remove().
+
+2- 

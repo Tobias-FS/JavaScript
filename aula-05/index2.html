@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        tbody tr:nth-child(odd) {
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+
+    <button>Remover</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr> <td>Ana</td> <td>3333333</td> </tr>
+            <tr> <td>bia</td> <td>5454545</td> </tr>
+            <tr> <td>Eu</td> <td>23425242</td> </tr>
+            <tr> <td>Zé</td> <td>234234</td> </tr>
+        </tbody>
+    </table>
+
+    <script>
+
+
+        document.querySelector( 'button' ).onclick = function() {
+
+            const tr = document.querySelector( 'tbody tr:nth-child(1)' );
+            if ( ! tr ) {
+                alert( 'Não consgui achar a linha' );
+                return;
+            }
+            tr.remove();
+        }
+
+    </script>
+    
+</body>
+</html>

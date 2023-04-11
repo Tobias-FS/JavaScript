@@ -1,0 +1,53 @@
+EXERCÍCIO 1
+Crie uma classe em ES5 chamada Guerreiro, com os atributos "energia" e "mana".
+A energia somente deve ser modificada para um valor entre 0 e 100. Já a mana, entre 0 e 50.
+Quando forem fornecidos valores não-numéricos ou incorretos, os valores não devem ser
+atribuídos. Faça com que os atributos iniciem com 100 e 25.
+
+EXERCÍCIO 2
+Adicione à classe os métodos a seguir:
+a) adicionarEnergia( valor ), que acrescenta o valor de energia ao guerreiro, não
+   ultrapassando o limite superior.
+b) sofrerDano( valor ), que reduz o valor informado da energia do guerreiro, não
+   ultrapassando o limite inferior.
+c) morto(), que retorna um booleano que indica se a energia do guerreiro chegou a zero.
+
+Sugestão: Crie um pequeno script no arquivo HTML que verifica se os métodos estão
+funcionando corretamente.
+
+[construtores - após explicação]
+
+EXERCÍCIO 3
+Em um novo arquivo, crie uma classe ItemMagico que possua os atributos privados
+manaAplicada e energiaAplicada, cujos valores devem ser recebidos pelo construtor.
+A classe não deve ter métodos setters públicos, mas deve ter getters.
+Os valores da mana e da energia devem ficar nas faixas respectivas de -5 a 5 e -20 a 20.
+Caso contrário, devem ser atribuídos os valores 0 e 0.
+
+EXERCÍCIO 4
+Na classe Guerreiro, crie um método usarItem( itemMagico ), que receba um item mágico e
+aplique a mana e a energia do item ao guerreiro, aumentando-as ou diminuindo-as.
+Observação: Alguns itens mágicos também pode causar perda de mana e de energia.
+
+EXERCÍCIO 5
+a) Adicione um atributo nome ao guerreiro, além de um getter e setter.
+b) Crie um arquivo luta.js em que haja uma função jogar(). A função deve criar dois
+   guerreiros que irão lutar. Para isso, deve ser gerado um valor aleatório - use o
+   método Math.random() para isso, que gera um valor flutuante entre 0 e 1. Se
+   o valor ficar entre 0 e 0.5, o nome do jogador 1 deve ser impresso, junto com a
+   indicação que ele irá atacar, e o jogador 2 deve sofrer um dano de 5 pontos.
+   Se o valor gerdo for acima de 0.5, deve ocorrer o inverso (jogador 1 sofre um dano).
+c) Modifique o jogo para imprimir o guerreiro vencedor, ao final das rodadas.
+   O guerreiro vencedor é aquele que tiver a maior energia. Se as energias forem iguais,
+   a maior mana. Do contrário, há um impate.
+
+EXERCÍCIO 6
+a) Adicione um atributo nome ao item mágico, além de um getter e setter.
+b) Modifique o jogo para que a cada 2 rodadas um item mágico seja criado e usado por um
+jogador. Esse item mágico deve conter valores de energia e mana gerados aleatoriamente,
+respeitando as faixas de cada um. Antes de o item mágico ser aplicado, imprima seu nome,
+o valor de seus atributos e o guerreiro em que será aplicado.
+c) Modifique o jogo para, caso um dos guerreiros morrer antes das 10 rodadas, o jogo
+   acabar.
+
+[herança - após explicação]

@@ -1,7 +1,16 @@
 function Guerreiro() {
 
-    var energia = '';
-    var mana = '';
+    var energia = 100;
+    var mana = 25;
+    var nome = '';
+
+    this.getNome = function() {
+        return nome;
+    }
+
+    this.setNome = function( nomeGuerreiro ) {
+        nome = nomeGuerreiro;
+    }
 
     this.getEnergia = function() {
         return energia;
@@ -10,9 +19,9 @@ function Guerreiro() {
     this.setEnergia = function ( valor ) {
 
         if ( ! isNaN( valor )) {
-            if ( valor > 100 ) {
+            if ( valor >= 100 ) {
                 energia = 100;
-            } if ( valor < 0 ) {
+            } if ( valor <= 0 ) {
                 energia = 0;
             } 
 
@@ -27,14 +36,17 @@ function Guerreiro() {
 
     this.setMana = function ( valor ) {
 
-        mana += valor;
+        if ( ! isNaN(valor) ) {
 
-        if ( mana > 50 ) {
-            mana = 50;
-        } if ( mana < 0 ) {
-            mana = 0;
-        } 
-
+            mana += valor;
+    
+            if ( mana >= 50 ) {
+                mana = 50;
+            } if ( mana <= 0 ) {
+                mana = 0;
+            } 
+        
+        }
         
     }
 
@@ -44,8 +56,8 @@ function Guerreiro() {
 
             energia += valor;
     
-            if ( energia > 50 ) {
-                mana = 50;
+            if ( energia >= 100 ) {
+                energia = 100;
             } 
 
         }
@@ -58,28 +70,32 @@ function Guerreiro() {
 
             energia -= valor;
     
-            if ( energia < 50 ) {
+            if ( energia <= 0 ) {
                 energia = 0;
             } 
         }
 
     }
 
-    this.morto = function ( energia ) {
-
-        return energia <= 0;
+    this.morto = function () {
+        
+        if ( energia <= 0 ) {
+            return true;
+        }
+        return false;
         
     }
 
 
     this.getItemMafico = function() {
-        
+
         return intemMagico;
+    
     }
 
     this.usarItemMagico = function ( intemMagico ) {
 
-        if( energia == 0 ) {
+        if( this.morto == 0 ) {
             console.log( "Jogador morto" );
             return;
         }
