@@ -1,0 +1,23 @@
+EXERCÍCIOS
+
+1) Crie um arquivo produto.js, que contenha uma classe Produto,
+   com os atributos descricao, estoque e preco. Crie propriedades
+   para os atributos, de forma a verificar os valores atribuídos.
+
+2) Em um arquivo valor-incorreto-error.js, crie uma classe
+   ValorIncorretoError, para representar exceções causadas
+   por valores incorretos.
+
+3) Modifique a classe Produto para que suas propriedades lancem
+   a exceção criada anteriormente caso os valores não respeitem as
+   regras a seguir:
+   a) A descrição do produto deve ter entre 2 e 100 caracteres.
+   b) O estoque deve ser um valor numérico natural (>=0).
+   c) O preço deve estar entre 10.00 e 99.999.
+
+4) Crie um arquivo produto.html que contenha um formulário com
+   campos de entrada equivalentes aos atributos do produto. Nele,
+   adicione um botão Salvar que simplesmente invoque uma função
+   que obtenha os dados do produto do formulário, passe-as para um
+   objeto da classe Produto e então as exiba no console.
+   Em caso de exceção, exiba a mensagem de erro em um alert().
